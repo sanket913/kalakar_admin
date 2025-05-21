@@ -124,7 +124,7 @@ const Login: React.FC = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       className="input pl-10 w-full text-sm sm:text-base"
-                      placeholder="admin@kalakar.com"
+                      placeholder="email"
                     />
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const Login: React.FC = () => {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       className="input pl-10 w-full text-sm sm:text-base"
-                      placeholder="••••••••"
+                      placeholder="password"
                     />
                     <button
                       type="button"
