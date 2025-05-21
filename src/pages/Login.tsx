@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Palette, Eye, EyeOff, Lock, Mail } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { useTheme } from '../contexts/ThemeContext';
+import { Sun, Moon } from 'lucide-react';
 
 // Import local images
 import gallery1 from '../assets/images/gallery1.jpeg';
@@ -143,13 +144,13 @@ const Login: React.FC = () => {
                       className="input pl-10 w-full text-sm sm:text-base"
                       placeholder="password"
                     />
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text"
-                    >
-                      {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
-                    </button>
+                    <button 
+  onClick={toggleTheme}
+  className="rounded-full p-2 text-text-muted hover:bg-primary/10"
+  aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
+>
+  {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+</button>
                   </div>
                 </div>
                 
