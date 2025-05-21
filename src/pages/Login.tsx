@@ -42,8 +42,8 @@ const ArtGallery = () => {
 };
 
 const Login: React.FC = () => {
-  const [email, setEmail] = useState('admin@kalakar.com');
-  const [password, setPassword] = useState('admin123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const { login, isLoading } = useAuth();
@@ -164,11 +164,6 @@ const Login: React.FC = () => {
               </div>
             </form>
             
-            <div className="mt-4 sm:mt-6 text-center">
-              <p className="text-xs sm:text-sm text-text-muted">
-                Demo credentials: admin@kalakar.com / admin123
-              </p>
-            </div>
           </div>
         </div>
       </div>
